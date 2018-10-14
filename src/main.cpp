@@ -7,6 +7,9 @@
   Usage          : nuttyfact
   Build with     : g++ -Wall -g -o oddities  main.cpp
   Modifications  :
+                   October 14, by SNW, removed const qualifier from output
+                   function parameter.
+                   
   Notes:
   The number N below is the number of people on each team.
   This program prints N peculiar facts, called "oddities" here.
@@ -35,7 +38,7 @@ using namespace std;
 /******************************************************************************/
 
 // The syntax of the output function that must be used to print an oddity.
-typedef ostream& (*output_function) (const ostream & out);
+typedef ostream& (*output_function) ( ostream & out);
 
 
 /******************************************************************************
@@ -48,12 +51,10 @@ typedef ostream& (*output_function) (const ostream & out);
 
 
 
-
 int main(int argc, char* argv[] )
 {
 
     // Calls to output functions
-
 
 
     return 0;
